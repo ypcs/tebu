@@ -1,0 +1,19 @@
+---
+language: python
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+
+install:
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+
+script:
+  - mkdir compiled
+  - pip freeze
+  - flake8 .
+  - python3 tebu.py -s misc=y -j examples/values1.json -y examples/values1.yaml -t examples/template1.conf.j2 --outdir=./compiled -y examples/values2.yaml && grep -q 'my_key = 6' compiled/template1.conf
+

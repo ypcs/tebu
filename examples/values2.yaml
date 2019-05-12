@@ -1,0 +1,9 @@
+---
+somekey: "this data comes from values2 yaml"
+duplicatekey: "this key has been specified twice in same file - first"
+duplicatekey: "this key has been specified twice in same file - second"
+
+# Comments are ok
+update: false
+
+check_this: "maybe"

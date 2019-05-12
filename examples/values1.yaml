@@ -1,0 +1,4 @@
+---
+my_key: 6
+another_key: false
+third_key: "this-key-only-in-yaml"
